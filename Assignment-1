@@ -1,0 +1,210 @@
+# 1.HELLO WORLD
+#Q. Write a Python program to print "Anything You find cool."
+print("Hello\nMy name is Kashika")
+ 
+ 
+# 2. Add Numbers and concatenate strings
+# 2.1  Write a program to add two numbers and print the result.
+a=2
+b=4
+c=print(a+b)
+# 2.2  Write a program to concatenate two strings and print the result
+s1="Python "
+s2="Programming"
+print(s1+s2)
+# 2.3  Write a program to concatenate a string and a number and print the result.
+str1 = "Hello "
+num1 = "5"
+print(str1+num1)
+
+
+# 3. If-Else Statements
+# 3.1  Write a Python program to check if a number is positive, negative, or zero using an if-else statement.
+n=int(input("enter the number : "))
+if(n<0):
+    print("number is negative")
+elif(n>0):
+    print("number is positive")
+else:
+    print("number is zero")
+#  3.2   Write a program to check if a given number is odd or even.
+m=int(input("enter the number : "))
+if(n%2==0):
+    print("entered number is even")
+elif(n%2!=0):
+    print("entered number is odd")
+ 
+ 
+#  4. Loops
+# 4.1  Write a program to print numbers from 1 to 10 using a for loop.
+for i in range(1,11):
+    print(i)
+# 4.2  Write a program to print numbers from 1 to 10 using a while loop.
+j=1
+while(j<=10):
+    print(j)
+    j=j+1
+# 4.3  Write a program to calculate the sum of numbers from 1 to 100 using a loop.
+sum = 0
+for i in range(1,101):
+   sum = sum + i
+print(sum)
+
+
+# 5. Data Structures
+# 5.1  Create a list of 5 numbers. Write a program to find the largest and smallest numbers in the list
+l=[23,51,6,60,73]
+print(max(l))
+print(min(l))
+# 5.2  Create a dictionary with at least 3 key-value pairs. Write a program to retrieve the value of a given key.
+d={"a":10,"b":20,"c":30}
+print(d.get("a"))
+# 5.3  Write a program to sort a list of numbers in ascending and descending order.
+list1=[45,72,36,5,92]
+list1.sort()
+print(list1)
+list1.sort(reverse=True)
+print(list1)
+# 5.4  Write a program to merge two dictionaries into one.
+d1={"maths":45,"science":40,"english":42}
+d2={"hindi":46,"punjabi":43}
+d3=d1 | d2
+print(d3)
+
+# 6. Strings
+# 6.1  Write a program to count the number of vowels in a given string.
+word="kashika"
+result=0
+vowel="aeiouAEIOU"
+for i in word:
+    if i in vowel:
+        result=result+1
+print(result)
+# 6.2  Write a program to reverse a string and print it. 
+str="Python"
+print(str[::-1])
+# 6.3  Write a program to check if a string is a palindrome.
+m="level"
+n=m[::-1]
+if(n==m):
+    print("it is palindrome")
+else:
+    print("it is not palindrome")
+ 
+ 
+#  7. File Handling
+# 7.1  Write a program to create a text file, write some text into it, and then read and print the content.
+f=open("myfile.txt","w")
+f.write("Believe in yourself, and you will achieve great things\n")
+f.close()
+f=open("myfile.txt","r")
+print(f.read())
+f.close()
+# 7.2  Write a program to append text to an existing file and print the updated content.
+f=open("myfile.txt","a")
+f.write("Thought of the day")
+f.close()
+f=open("myfile.txt","r")
+print(f.read())
+f.close()
+# 7.3  Write a program to count the number of lines in a text file.
+f=open("myfile.txt","r")
+count = len(f.readlines())
+print(count)
+
+# 8. Exception Handling
+# 8.1  Write a program to handle division by zero using a try-except block.
+try:
+    z=int(input("enter the value : "))
+    y=int(input("enter the value : "))
+    print(z/y)
+except:
+    print("error:divison by zero not allowed")
+# 8.2  Write a program to handle invalid input (e.g., when the user enters a string instead of a number).
+try:
+    val=int(input("enter:"))
+    print(val)
+except ValueError:
+    print("invalid input")
+#  8.3  Write a program to demonstrate the use of finally in exception handling.
+try:
+    r=int(input("enter an integer :"))
+except:
+    print("number is not an integer")
+else:
+    print("integer accepted")
+finally:
+    print("this block is always executed")
+ 
+
+# 9. Random Numbers   
+# 9.1  Write a program to generate 5 random numbers between 1 and 100 and print them.
+import random
+v=1
+while(v<=5):
+ print(random.randrange(1,100))
+ v=v+1
+# 9.2  Write a program to generate a random number and check if it is prime.
+import random
+c=random.randrange(1,1000)
+print(c)
+flag=True
+for i in range(2,c):
+    if(c%i==0):
+        flag=False
+if(flag==True):
+       print("it is prime")
+else:
+    print("it is not prime")
+# 9.3  Write a program to simulate rolling a six-sided die.
+import random
+w=random.randrange(1,7,1)
+print(w)
+# 9.4   Write a program to shuffle a list of numbers.
+import random
+list2=[1,2,3,4,5,6]
+random.shuffle(list2)
+print(list2)
+# 9.5  Write a program to randomly select an item from a list.
+import random
+list3=[34,72,38,93,60]
+print(random.choice(list3))
+# 9.6   Write a program to generate a random password of given length.
+import random
+import string
+password=''.join(random.choices(string.ascii_letters + string.digits, k=5))
+print(password)
+#9.7  Write a program to pick a random card from a standard deck of 52 cards.
+import random
+number=random.choice([2,3,4,5,6,7,8,9,10,"Ace","Jack","Queen","King"])
+card=random.choice(["spades","Heart","Diamond","Club"])
+print(str(number)+" of "+card)
+
+
+# 10. Command Line Arguments
+#10.1  Write a program to accept two numbers as command-line arguments, add them, and print the result.
+import sys
+sys.argv=['sum','2','5']
+num1=float(sys.argv[1])
+num2=float(sys.argv[2])
+print("sum",num1+num2)
+#10.2  Write a program to accept a string as a command-line argument and print its length.
+import sys
+sys.argv=['sum','2','5']
+str1=sys.argv[2]
+print("length of string is: ",len(str1))
+
+
+
+# 11. Use of Libraries
+# 11.1  Write a program to use the math library to calculate the square root of a given number.
+import math
+x=math.sqrt(4)
+print(x)
+# 11.2  Write a program to use the datetime library to print the current date and time.
+import datetime
+time=datetime.datetime.now()
+print(time)
+#11.3   Write a program to use the os library to list all files in the current directory.
+import os
+print(os.listdir())
